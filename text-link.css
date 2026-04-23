@@ -1,0 +1,78 @@
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding: 2rem;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: transform 0.43s ease, color 0.43s ease;
+}
+
+nav a:hover {
+    color: #00fff7;
+    transform: translateY(-2px) scale(1.1);
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1rem 2rem;
+    isolation: isolate;
+    transition: transform 0.43s ease, color 0.43s ease;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #3d3b3b;
+    z-index: -1;
+    border-radius: 20px;
+    transition: opacity 0.43s ease;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(45deg, #2302fd, #ff0303, #5df803, #f811fc);
+    z-index: -2;
+    border-radius: 22px;
+}
+
+.btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    color: #fff;
+}
+
+.btn:hover::before {
+    opacity: 0;
+}
+
+.terminal-input {
+    background: #000000;
+    color: #fff;
+    border: none;
+    width: 100%;
+}
+
+.terminal-input:focus {
+    outline: none;
+    border: none;
+}
+

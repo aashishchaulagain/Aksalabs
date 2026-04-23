@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main-section.css">
+    <link rel="stylesheet" href="text-link.css">
+    <link rel="stylesheet" href="image.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" class="logoimg">
+        </div>
+        <ul class="link-container">
+            <li><a href="home.html">home</a></li>
+            <li>
+                <a href="#footer">contact</a>
+            </li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="blog.html">blog</a></li>
+            <li><a href="services.html">services</a></li>
+        </ul>
+    </nav>
+    <main>
+        <img src="main.jpeg">
+        <a href="#descriptive-area" class="btn">Explore</a>
+    </main>
+    <section class="descriptive-area" id="descriptive-area">
+        <div class="terminal">
+            <div class="terminal-head">
+                <h4>Aksalabs -details</h4>
+                <h5>Type help to see commands --Not case sensitive--</h5>
+            </div>
+            <div class="terminal-line"></div>
+            <input type="text" class="terminal-input" id="terminal-input">
+        </div>
+    </section>
+    <div class="progress-track">
+        <div class="loader-container">
+            <div class="rotationbar"></div>
+            <div class="smallbar"></div>
+        </div>
+        <p id="status">0%</p>
+    </div>
+    <script src="navigation.js"></script>
+</body>
+</html>

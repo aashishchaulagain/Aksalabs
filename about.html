@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">                        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main-section.css">
+    <link rel="stylesheet" href="text-link.css">
+    <link rel="stylesheet" href="image.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" class="logoimg">
+        </div>
+        <ul class="link-container">
+            <li><a href="index.html">home</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="blog.html">blog</a></li>
+            <li><a href="services.html">services</a></li>
+        </ul>
+    </nav>
+    <main class="about">
+        <img src="main.jpeg">
+        <div class="container">
+            <div class="header">
+                <h1>AksaLabs</h1>
+                <p>
+                    We build structured digital systems focused on usability, performance, and clarity across devices.
+                </p>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h2>What this is</h2>
+                    <p>
+                    A design and development studio focused on building functional software systems,
+                    not just visual interfaces.
+                    </p>
+                </div>
+                <div class="card">
+                    <h2>What we build</h2>
+                    <ul>
+                    <li>Web applications with responsive layouts</li>
+                    <li>Reusable UI components and design systems</li>
+                    <li>Brand identities and interface design</li>
+                    <li>Practical tools and software solutions</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2>How we work</h2>
+                    <p>
+                    We design with structure first — focusing on layout behavior, responsiveness,
+                    and system consistency before visual styling. Each component is built to scale,
+                    not just to display.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="progress-track">
+        <div class="loader-container">
+            <div class="rotationbar"></div>
+            <div class="smallbar"></div>
+        </div>
+        <p id="status">0%</p>
+    </div>
+    <script>
+        const Progressdata = document.querySelector('#status');
+        const backgroundloader = document.querySelector('.progress-track');
+        function loader() {
+            let property = 0;
+            const interval = setInterval(() => {
+                    property += 1;
+                    if (Progressdata) {
+                        Progressdata.textContent = property + '%';
+                    }
+                    if (property >= 100) {
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            backgroundloader.style.opacity = 0;
+                            backgroundloader.style.transition = 'opacity 0.5s ease';
+                            setTimeout(() => {
+                            backgroundloader.style.display = 'none'; 
+                            }, 500);
+                    }, 500);
+                }
+            }, 10);
+        }
+        loader();   
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Dropdown</title>
+    <style>
+        :root {
+            --accent-cyan: rgb(0, 255, 255);
+            --bg-glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background: #0b0b0b;
+            font-family: 'Gill Sans', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 40px;
+        }
+
+        /* The Main Link Wrapper */
+        .drop-container {
+            position: relative; /* Anchor for the menu */
+            padding: 10px 0;
+            cursor: pointer;
+            color: whitesmoke;
+            font-weight: 900;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .drop-container:hover {
+            color: var(--accent-cyan);
+        }
+
+        /* The Hidden Menu */
+        .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%; /* Sits exactly below the parent */
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 2px solid var(--accent-cyan); /* Nice accent line */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            width: max-content;
+            z-index: 1000;
+            list-style: none;
+        }
+
+        /* Show on Hover */
+        .drop-container:hover .dropdown-menu {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Menu Content Styles */
+        .menu-item {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-transform: none; /* Keep text readable */
+        }
+
+        .menu-item strong {
+            color: var(--accent-cyan);
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" style="color: white; text-decoration: none; font-weight: 900;">HOME</a></li>
+            
+            <li class="drop-container">
+                CONTACT
+                <ul class="dropdown-menu">
+                    <li class="menu-item">
+                        <strong>Email</strong>
+                        z7a2y@aksalabs.com
+                    </li>
+                    <li class="menu-item">
+                        <strong>Phone</strong>
+                        +1 (555) 000-1234
+                    </li>
+                    <li class="menu-item" style="margin-bottom: 0;">
+                        <strong>Support</strong>
+                        24/7 Active
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="#" style="color: white; text-decoration: none; font-weight: 900;">ABOUT</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

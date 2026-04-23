@@ -1,0 +1,64 @@
+.logoimg {
+    width: 190px;
+    height: 90px;
+}
+
+main img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.progress-track {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.rotationbar {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid #00fff7;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+.smallbar {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid #fff; 
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite reverse; 
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#status {
+    display: flex;
+    font-size: 2rem;
+    color: #fff;
+}

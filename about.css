@@ -1,0 +1,62 @@
+.about {
+    padding: 60px 20px;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    margin-top: 20vh;
+}
+
+.header p {
+    opacity: 0.7;
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.cards {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border-radius: 16px;
+    padding: 20px;
+    transition: transform 0.3s ease, backdrop-filter 1s ease;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    backdrop-filter: blur(0px) saturate(100%);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p,
+.card li {
+    opacity: 0.75;
+    line-height: 1.5;
+}
+
+.card ul {
+    padding-left: 18px;
+}
+
+
+
